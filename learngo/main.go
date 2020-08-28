@@ -5,21 +5,15 @@ import (
 	"strings"
 )
 
-// several returns
-func lenAndUpper(name string) (int, string) {
-	return len(name), strings.ToUpper(name)
-}
-
 // naked return
 func lenAndUpper2(name string) (length int, uppercase string) {
+	defer fmt.Println("I'm dome") // defer : 함수가 끝났을 때 실행
 	length = len(name)
 	uppercase = strings.ToUpper(name)
 	return
 }
 
 func main() {
-	len, up := lenAndUpper("abcd")
-	fmt.Println(len, up)
-	length, upper := lenAndUpper2("efghijk")
+	length, upper := lenAndUpper2("abcde")
 	fmt.Println(length, upper)
 }
