@@ -17,7 +17,7 @@ func main() {
 	fmt.Println(length, upper)
 }*/
 
-// 1.5 for
+// 1.5 for, range, ...args
 /*func superAdd(numbers ...int) int {
 	var total int = 0
 	for _, num := range numbers {
@@ -31,7 +31,7 @@ func main() {
 	fmt.Println(result)
 }*/
 
-// 1.6 if
+// 1.6 if with a Twist
 /*func canIDrink(age int) bool {
 	if koreanAge := age + 2; koreanAge > 18 {
 		return true
@@ -44,7 +44,7 @@ func main() {
 }*/
 
 // 1.7 switch
-func canIDrink(age int) bool {
+/*func canIDrink(age int) bool {
 	switch {
 	case age > 18:
 		return true
@@ -56,4 +56,19 @@ func canIDrink(age int) bool {
 
 func main() {
 	fmt.Println(canIDrink(19))
+}*/
+
+// 1.8 pointers
+/*func main() {
+	a := 2
+	b := &a
+	*b = 20
+	fmt.Println(a, &a, b, *b)
+}*/
+
+// 1.9 arrays and slices
+func main() {
+	names := []string{"a", "b", "c"}
+	names = append(names, "d")
+	fmt.Println(names)
 }
