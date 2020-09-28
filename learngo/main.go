@@ -67,8 +67,29 @@ func main() {
 }*/
 
 // 1.9 arrays and slices
-func main() {
+/*func main() {
 	names := []string{"a", "b", "c"}
 	names = append(names, "d")
 	fmt.Println(names)
+}*/
+
+// 1.10 Maps
+/*func main() {
+	nico := map[string]string{"name": "nico", "age": "12"}
+	for key, value := range nico {
+		fmt.Println(key, value)
+	}
+}*/
+
+// 1.11 Structs
+type person struct {
+	name    string
+	age     int
+	favFood []string
+}
+
+func main() {
+	favFood := []string{"kimchi", "ramen"}
+	nico := person{name: "nico", age: 18, favFood: favFood}
+	fmt.Println(nico)
 }
