@@ -15,7 +15,7 @@ func main() {
 		fmt.Println(definition)
 	}*/
 
-	err := dictionary.Add("hello", "Greeting")
+	/*err := dictionary.Add("hello", "Greeting")
 	if err != nil {
 		fmt.Println(err)
 	}
@@ -25,5 +25,17 @@ func main() {
 	err2 := dictionary.Add("hello", "hi")
 	if err2 != nil {
 		fmt.Println(err2)
+	}*/
+
+	baseword := "hello"
+	dictionary.Add(baseword, "First")
+
+	dictionary.Delete(baseword)
+
+	word, err := dictionary.Search(baseword)
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println(word)
 	}
 }
